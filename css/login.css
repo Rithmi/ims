@@ -1,3 +1,5 @@
+*,*::before,*::after{box-sizing:border-box}body,h1,h2,h3,h4,p,figure,blockquote,dl,dd{margin:0}ul[role="list"],ol[role="list"]{list-style:none}html:focus-within{scroll-behavior:smooth}body{min-height:100vh;text-rendering:optimizeSpeed;line-height:1.5}a:not([class]){text-decoration-skip-ink:auto}img,picture{max-width:100%;display:block}input,button,textarea,select{font:inherit}@media(prefers-reduced-motion:reduce){html:focus-within{scroll-behavior:auto}*,*::before,*::after{animation-duration:.01ms !important;animation-iteration-count:1 !important;transition-duration:.01ms !important;scroll-behavior:auto !important}} 
+ 
 
 /* Reset default styles */
 * {
@@ -8,13 +10,17 @@
 }
 
 /* Full page layout */
-body {
-    background: url('../images/login-background.jpg')no-repeat center center fixed;
+body#loginBody {
+    background: url('../images/login-background.png')no-repeat center center fixed;
     background-size: cover;
     height: 100vh;
     display: flex;
     justify-content: center;
     align-items: center;
+}
+
+body{
+    font-family: arial;
 }
 
 /* Container styling */
@@ -35,7 +41,7 @@ body {
 /* Header */
 .loginHeader h1 {
     font-size: 2.5rem;
-    color: #6c63ff;
+    color: #f685a1;
     margin-bottom: 5px;
 }
 
@@ -69,15 +75,15 @@ body {
 }
 
 .loginBody input:focus {
-    border-color: #6c63ff;
+    border-color:#f685a1;
     outline: none;
-    box-shadow: 0 0 8px rgba(108, 99, 255, 0.3);
+    box-shadow: 0 0 8px rgba(105, 2, 33, 0.3);
 }
 
 /* Button styling */
 button {
     width: 100%;
-    background: #6c63ff;
+    background: #f685a1;
     color: #fff;
     border: none;
     padding: 12px;
@@ -89,8 +95,8 @@ button {
 }
 
 button:hover {
-    background: #5848e5;
-    box-shadow: 0 5px 15px rgba(108, 99, 255, 0.4);
+    background: #c22b8a;
+    box-shadow: 0 5px 15px rgba(246, 68, 205, 0.4);
 }
 
 /* Mobile responsive */
@@ -99,4 +105,171 @@ button:hover {
         width: 90%;
         padding: 30px 20px;
     }
+}
+
+/* Home Page*/
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+}
+
+/* Header */
+div.header {
+  width: 100%;
+  height: 60px;
+  background: #f685a1;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 30px;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+div.header h2 {
+  color: #fff;
+  font-size: 22px;
+  letter-spacing: 1px;
+}
+
+div.header nav a {
+  color: #fff;
+  margin-left: 20px;
+  text-decoration: none;
+  font-weight: 500;
+  transition: 0.3s;
+}
+
+div.header nav a:hover {
+  color: #333;
+}
+
+/* Banner Section */
+div.banner {
+  background: url('../images/home.png') no-repeat center center/cover;
+  padding: 150px 20px;
+  text-align: center;
+  position: relative;
+  color: #fff;
+}
+
+div.banner::after {
+  content: "";
+  position: absolute;
+  top: 0; left: 0;
+  width: 100%; height: 100%;
+  background: rgba(0, 0, 0, 0.4);
+}
+
+div.bannerHeader {
+  position: relative;
+  z-index: 1;
+  animation: fadeIn 1.5s ease-in-out;
+}
+
+div.bannerHeader h1 {
+  font-size: 70px;
+  color: #f685a1;
+}
+
+div.bannerHeader p {
+  font-size: 28px;
+  text-transform: uppercase;
+  color: #fff;
+}
+
+p.bannerTagline {
+  margin-top: 20px;
+  font-size: 18px;
+  color: #ddd;
+}
+
+/* Banner Icons */
+div.bannerIcons {
+  margin-top: 60px;
+}
+
+div.bannerIcons a {
+  font-size: 22px;
+  margin: 0 10px;
+  padding: 12px;
+  background: rgba(255, 255, 255, 0.2);
+  color: #fff;
+  border-radius: 50%;
+  transition: 0.3s;
+}
+
+div.bannerIcons a:hover {
+  background: #f685a1;
+  transform: scale(1.1);
+}
+
+/* Homepage Features */
+div.homepageContainer {
+  width: 100%;
+  max-width: 1100px;
+  margin: 80px auto;
+  padding: 20px;
+}
+
+div.homepageFeatures {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: center;
+}
+
+div.homepageFeature {
+  background: #fff;
+  padding: 30px 20px;
+  border-radius: 12px;
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  flex: 1 1 280px;
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+div.homepageFeature:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+}
+
+span.featureIcon {
+  height: 80px;
+  width: 80px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 36px;
+  background: #f685a1;
+  color: #fff;
+  border-radius: 50%;
+  margin-bottom: 20px;
+}
+
+h3.featureTitle {
+  font-size: 20px;
+  margin-bottom: 15px;
+  color: #333;
+}
+
+p.featureDescription {
+  font-size: 15px;
+  color: #666;
+  line-height: 1.6;
+}
+
+/* Animations */
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(-20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  div.bannerHeader h1 { font-size: 50px; }
+  div.bannerHeader p { font-size: 22px; }
 }
