@@ -119,7 +119,7 @@ button:hover {
 div.header {
   width: 100%;
   height: 60px;
-  background: #f685a1;
+  background: #f685a1;       /* pink header background */
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -129,23 +129,34 @@ div.header {
   z-index: 1000;
 }
 
+/* Title */
 div.header h2 {
   color: #fff;
   font-size: 22px;
   letter-spacing: 1px;
+  margin: 0;
 }
 
-div.header nav a {
-  color: #fff;
-  margin-left: 20px;
+/* Login link */
+div.header a {
+  color: #352f2f;
+  font-size: 16px;
   text-decoration: none;
+  background: #fff2f5;       /* soft contrast background */
+  padding: 6px 14px;
+  border-radius: 5px;
+  transition: all 0.3s ease;
   font-weight: 500;
-  transition: 0.3s;
 }
 
-div.header nav a:hover {
-  color: #333;
+/* Hover effect */
+div.header a:hover {
+  background: #fff;
+  color: #f685a1;
 }
+
+
+ 
 
 /* Banner Section */
 div.banner {
@@ -272,4 +283,187 @@ p.featureDescription {
 @media (max-width: 768px) {
   div.bannerHeader h1 { font-size: 50px; }
   div.bannerHeader p { font-size: 22px; }
+}
+
+/* Section background */
+.notify-section {
+  width: 100%;
+  background: #f5f5f5;   /* soft gray */
+  padding: 80px 20px;
+  display: flex;
+  justify-content: center;
+}
+
+/* Content container */
+.notify-container {
+  max-width: 700px;
+  text-align: center;
+}
+
+/* Title */
+.notify-container h2 {
+  font-size: 28px;
+  font-weight: 700;
+  color: #222;
+  margin-bottom: 15px;
+}
+
+/* Paragraph */
+.notify-container p {
+  font-size: 16px;
+  color: #555;
+  margin-bottom: 30px;
+  line-height: 1.6;
+}
+
+/* Form layout */
+.notify-container form {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  flex-wrap: wrap;   /* stack nicely on small screens */
+}
+
+/* Input field */
+.notify-container input[type="email"] {
+  padding: 14px 18px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  font-size: 16px;
+  width: 60%;
+  min-width: 250px;
+  outline: none;
+  transition: border 0.3s ease;
+}
+
+.notify-container input[type="email"]:focus {
+  border-color: #ff4db5;
+}
+
+/* Button */
+.notify-container button {
+  padding: 14px 28px;
+  background: #ff3fd6;
+  color: #fff;
+  border: none;
+  border-radius: 8px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+.notify-container button:hover {
+  background: #ff4394;
+}
+
+
+/* Social Section */
+.socials {
+  width: 100%;
+  background: #222;          /* dark background */
+  padding: 70px 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+/* Container */
+.socials .homepageContainer {
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+/* Header */
+.socialHeader {
+  font-size: 26px;
+  font-weight: 700;
+  color: #fff;
+  margin-bottom: 15px;
+}
+
+/* Subtext */
+.socialText {
+  font-size: 16px;
+  color: #bbb;
+  margin-bottom: 30px;
+  line-height: 1.6;
+}
+
+/* Icon container */
+.socialIconsContainer {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+/* Social icons */
+.socialIconsContainer a {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 50px;
+  height: 50px;
+  background: #333;
+  border-radius: 50%;
+  color: #fff;
+  font-size: 20px;
+  text-decoration: none;
+  transition: all 0.3s ease;
+}
+
+/* Hover effect */
+.socialIconsContainer a:hover {
+  background: #f900c3;
+  transform: translateY(-5px);
+  box-shadow: 0 5px 15px rgba(249, 9, 177, 0.4);
+}
+
+/* Footer Section */
+.footer {
+  width: 100%;
+  background: #111;         /* dark background */
+  padding: 40px 20px 20px;  /* more padding on top */
+  text-align: center;
+  color: #bbb;
+}
+
+/* Container for links */
+.footer .homepageContainer {
+  max-width: 1000px;
+  margin: 0 auto 20px auto;
+  display: flex;
+  flex-wrap: wrap;          /* wraps links on small screens */
+  justify-content: center;
+  gap: 25px;
+}
+
+/* Footer Links */
+.footer .homepageContainer a {
+  color: #bbb;
+  font-size: 15px;
+  text-decoration: none;
+  transition: all 0.3s ease;
+}
+
+/* Hover effect */
+.footer .homepageContainer a:hover {
+  color: #fff;
+  text-decoration: underline;
+}
+
+/* Copyright text */
+.footer-copy {
+  font-size: 14px;
+  color: #777;
+  margin-top: 10px;
+}
+
+/* Responsive */
+@media (max-width: 600px) {
+  .footer .homepageContainer {
+    flex-direction: column;
+    gap: 15px;
+  }
 }
